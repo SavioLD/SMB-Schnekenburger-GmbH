@@ -19,6 +19,13 @@
 <meta property="og:title" content="Karriere bei SMB Schnekenburger – Jobs in Bad Dürrheim" />
 <meta property="og:description" content="Bediener Biege- & Lasertechnik und Vertriebsinnendienst (m/w/d) gesucht. Unbefristet, Vollzeit, familiäres Team. Jetzt bewerben – Lebenslauf optional." />
 <meta property="og:url" content="https://saviold.github.io/SMB-Schnekenburger-GmbH/" />
+<meta property="og:image" content="https://saviold.github.io/SMB-Schnekenburger-GmbH/bilder/SMB_Produktion.jpg" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1280" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Karriere bei SMB Schnekenburger – Jobs in Bad Dürrheim" />
+<meta name="twitter:description" content="Bediener Biege- & Lasertechnik und Vertriebsinnendienst (m/w/d) gesucht. Jetzt in rund einer Minute bewerben." />
+<meta name="twitter:image" content="https://saviold.github.io/SMB-Schnekenburger-GmbH/bilder/SMB_Produktion.jpg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -79,14 +86,15 @@
   --ink:#152238;
   --ink-soft:#3f4d68;
   --ink-mute:#71809c;
-  /* SMB-Navy (aus dem Corporate Design – Blau auf Weiß) */
-  --brand-900:#0e1e3d;
-  --brand-700:#1a3566;
-  --brand:#21458c;
-  --brand-dark:#183567;
-  --brand-soft:#e7eef9;
+  /* SMB Corporate Design: tiefes Navy + Stahlgrau auf Weiß (aus dem Logo) */
+  --brand-900:#0e1c3a;
+  --brand-700:#1a2f5c;
+  --brand:#1e3a74;
+  --brand-dark:#152a52;
+  --brand-soft:#e8edf7;
+  --steel:#7f868d;
   --accent:#4c82d8;
-  --grad:linear-gradient(125deg,#0d1c38 0%,#1a3568 46%,#2b5eae 100%);
+  --grad:linear-gradient(125deg,#0c1a34 0%,#17285a 46%,#274f97 100%);
   --f-display:"Mulish",sans-serif;
   --f-body:"Mulish",sans-serif;
   --radius:16px;
@@ -106,7 +114,7 @@ img{max-width:100%;display:block}
 .topbar{position:fixed;inset:0 0 auto 0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(255,255,255,.9);border-bottom:1px solid var(--line)}
 .topbar__inner{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{display:flex;align-items:center}
-.brand__logo{display:none;height:40px;width:auto}
+.brand__logo{display:none;height:46px;width:auto}
 .brand__fallback{display:flex;flex-direction:column;line-height:1.02}
 .brand__name{font-family:var(--f-display);font-weight:900;font-size:26px;letter-spacing:.06em;color:var(--brand-700)}
 .brand__sub{font-weight:800;font-size:8px;letter-spacing:.13em;text-transform:uppercase;color:var(--brand-700)}
@@ -126,9 +134,9 @@ img{max-width:100%;display:block}
 
 /* ---------- HERO ---------- */
 .hero{position:relative;overflow:hidden;background:var(--brand-900)}
-.hero__media{position:absolute;inset:0;background-color:#0d1c38;background-image:var(--grad);background-size:cover;background-position:center}
-.hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,20,42,.4),transparent 60%)}
-.hero__inner{position:relative;display:flex;min-height:580px}
+.hero__media{position:absolute;inset:0;z-index:0;background-color:#0d1c38;background-image:var(--grad);background-size:cover;background-position:center right}
+.hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,20,44,.7) 0%,rgba(12,26,54,.4) 45%,transparent 70%)}
+.hero__inner{position:relative;z-index:1;display:flex;min-height:580px}
 .hero__panel{position:relative;flex:0 0 56%;max-width:660px;display:flex;flex-direction:column;justify-content:center;padding:150px 48px 56px;color:#fff}
 .hero__panel>*{text-shadow:0 1px 14px rgba(6,14,30,.5)}
 .hero__cta .btn{text-shadow:none}
@@ -206,8 +214,8 @@ section[id],.form-card{scroll-margin-top:80px}
 .step p{font-size:14px;color:var(--ink-soft);font-weight:600}
 
 /* ---------- mid CTA ---------- */
-.midcta{position:relative;overflow:hidden;background:var(--brand-900)}
-.midcta::before{content:"";position:absolute;inset:0;background:var(--grad);opacity:.96}
+.midcta{position:relative;overflow:hidden;background:var(--brand-900) center/cover no-repeat}
+.midcta::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(12,26,52,.95) 0%,rgba(23,40,90,.80) 58%,rgba(23,40,90,.60) 100%)}
 .midcta__in{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:44px 0}
 .midcta h2{color:#fff;font-size:clamp(23px,3.4vw,32px);max-width:640px}
 .midcta p{color:#dde9fb;font-weight:700;margin-top:6px}
@@ -322,7 +330,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
   .shell{padding:0 18px}
   section{padding:52px 0}
   .topbar__inner{height:58px}
-  .brand__logo{height:34px}
+  .brand__logo{height:40px}
   .brand__name{font-size:22px}
   .hero__logo img{height:44px}
   .hero__logo .brand__fallback b{font-size:32px}
@@ -508,7 +516,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
 </section>
 
 <!-- ============ MID CTA ============ -->
-<div class="midcta">
+<div class="midcta" style="background-image:url('bilder/SMB_Karriere_05.jpg')">
   <div class="shell">
     <div class="midcta__in">
       <div>
@@ -841,23 +849,31 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
       probe.onerror = tryNext; probe.src = url;
     })();
   }
-  loadLogo(document.getElementById("logoHeader"), ["bilder/smb-logo.svg","bilder/smb-logo.png","bilder/logo.svg","bilder/logo.png"]);
-  loadLogo(document.getElementById("logoHero"),   ["bilder/smb-logo-weiss.svg","bilder/smb-logo-weiss.png","bilder/smb-logo-white.svg","bilder/smb-logo-white.png","bilder/smb-logo.svg","bilder/smb-logo.png"]);
-  loadLogo(document.getElementById("logoFooter"), ["bilder/smb-logo-weiss.svg","bilder/smb-logo-weiss.png","bilder/smb-logo-white.svg","bilder/smb-logo-white.png","bilder/smb-logo.svg","bilder/smb-logo.png"]);
+  /* Topbar: echtes SMB-Logo (dunkel, auf weißem Grund). */
+  loadLogo(document.getElementById("logoHeader"), ["bilder/SMB-Logo.png"]);
+  /* Hero & Footer bleiben bewusst als helle Text-Wortmarke – wirkt auf dem
+     dunklen Navy klarer als das kleine, zweifarbige Logo. */
 
   /* =========================================================
      Hero-Hintergrundbild (optional, aus bilder/)
      ========================================================= */
   (function(){
     var heroMedia = document.getElementById("heroMedia");
-    var cands = ["bilder/hero.jpg","bilder/hero.webp","bilder/hero.png"];
-    (function tryNext(i){
-      if (i >= cands.length) return;
-      var probe = new Image();
-      probe.onload  = function(){ heroMedia.style.backgroundImage = "linear-gradient(112deg,rgba(9,20,42,.72),rgba(20,40,80,.55)), url('" + cands[i] + "')"; };
-      probe.onerror = function(){ tryNext(i+1); };
-      probe.src = cands[i];
-    })(0);
+    /* Hero-Bild je nach gewählter/verlinkter Stelle. Fehlt die Datei,
+       bleibt automatisch der Navy-Farbverlauf stehen. */
+    var HERO_IMG = {
+      "":         "bilder/SMB_Produktion.jpg",
+      "abkanten": "bilder/SMB_Produktion.jpg",
+      "laser":    "bilder/SMB_Verbindungstechnik_05.jpg",
+      "vertrieb": "bilder/SMB_Gebaeude_01.jpg"
+    };
+    var raw = new URLSearchParams(location.search).get("stelle");
+    var k = raw ? (ALIASES[raw.toLowerCase()] || "") : "";
+    var name = HERO_IMG[k] || HERO_IMG[""];
+    var probe = new Image();
+    probe.onload  = function(){ heroMedia.style.backgroundImage = "url('" + name + "')"; };
+    probe.onerror = function(){ /* Bild fehlt -> Farbverlauf bleibt */ };
+    probe.src = name;
   })();
 
   /* =========================================================
