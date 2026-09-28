@@ -142,7 +142,7 @@ img{max-width:100%;display:block}
 .hero__cta .btn{text-shadow:none}
 .hero__panel::before{content:"";position:absolute;inset:0 auto 0 -100vw;width:calc(100vw + 62%);background:linear-gradient(112deg,rgba(9,20,42,.97) 0%,rgba(20,40,80,.93) 46%,rgba(43,94,174,.55) 100%);z-index:-1;border-radius:0 62% 62% 0 / 0 50% 50% 0;box-shadow:0 30px 80px rgba(9,20,42,.35)}
 .hero__logo{margin-bottom:26px}
-.hero__logo img{display:none;height:54px;width:auto}
+.hero__logo img{display:none;height:66px;width:auto;filter:brightness(0) invert(1)}
 .hero__logo .brand__fallback b{font-family:var(--f-display);font-weight:900;font-size:38px;letter-spacing:.06em;color:#fff;line-height:1}
 .hero__logo .brand__fallback span{display:block;font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#a9c6ef;margin-top:6px}
 .hero__eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#a9c6ef;margin-bottom:16px}
@@ -312,7 +312,7 @@ section[id],.form-card{scroll-margin-top:80px}
 /* ---------- footer ---------- */
 footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
 .footer__grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
-.footer__brand img{display:none;height:46px;width:auto;margin-bottom:6px}
+.footer__brand img{display:none;height:50px;width:auto;margin-bottom:10px;filter:brightness(0) invert(1)}
 .footer__brand b{font-family:var(--f-display);font-weight:900;font-size:28px;letter-spacing:.06em;color:#fff}
 .footer__brand .brand__sub{color:#8fb0e6;font-size:9px;margin-top:2px}
 .footer__col p{font-size:14px;color:#a7bde3;margin-top:12px;max-width:320px;font-weight:600}
@@ -343,7 +343,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
   .topbar__inner{height:58px}
   .brand__logo{height:40px}
   .brand__name{font-size:22px}
-  .hero__logo img{height:44px}
+  .hero__logo img{height:52px}
   .hero__logo .brand__fallback b{font-size:32px}
   .hero h1{font-size:29px}
   .hero__sub{font-size:16px}
@@ -882,10 +882,12 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
       probe.onerror = tryNext; probe.src = url;
     })();
   }
-  /* Topbar: echtes SMB-Logo (dunkel, auf weißem Grund). */
+  /* Überall das ORIGINAL-Logo (SMB-Logo.png). Topbar: dunkel auf weißem Grund.
+     Hero & Footer: dunkler Grund -> per CSS-Filter als weiße Variante des
+     Originals (transparenter Hintergrund, daher sauber ohne Kasten). */
   loadLogo(document.getElementById("logoHeader"), ["bilder/SMB-Logo.png"]);
-  /* Hero & Footer bleiben bewusst als helle Text-Wortmarke – wirkt auf dem
-     dunklen Navy klarer als das kleine, zweifarbige Logo. */
+  loadLogo(document.getElementById("logoHero"),   ["bilder/SMB-Logo.png"]);
+  loadLogo(document.getElementById("logoFooter"), ["bilder/SMB-Logo.png"]);
 
   /* =========================================================
      Hero-Hintergrundbild (optional, aus bilder/)
