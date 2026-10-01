@@ -12,7 +12,7 @@
 
 | Datei | Format | Beschreibung |
 |-------|--------|--------------|
-| `SMB_Facebook_Profil.png` | 1080 × 1080 | Profilbild (identisch zur Navy-Variante, rund zugeschnitten) |
+| `SMB_Facebook_Profil.png` | 1080 × 1080 | Profilbild – komplettes Original-Logo auf hellem Grund, rund optimiert |
 | `SMB_Facebook_Titelbild.png` | 1702 × 630 | Titelbild (2× von 851 × 315) |
 
 **Wichtig zum Titelbild:** Alle Texte liegen in der Facebook-Sicherheitszone –
