@@ -543,7 +543,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
     <span class="kicker">So läuft's ab</span>
     <h2 class="sec-title">In drei Schritten zu SMB.</h2>
     <div class="steps">
-      <div class="step reveal"><b>Kurz bewerben</b><p>Stelle wählen, ein paar kurze Fragen zu deiner Erfahrung beantworten, Kontaktdaten hinterlassen und Lebenslauf anhängen.</p></div>
+      <div class="step reveal"><b>Kurz bewerben</b><p>Stelle wählen, ein paar kurze Fragen zu deiner Erfahrung beantworten und Kontaktdaten hinterlassen – den Lebenslauf kannst du direkt anhängen.</p></div>
       <div class="step reveal"><b>Wir melden uns persönlich</b><p>Du bekommst schnell eine Rückmeldung, und wir klären erste Fragen kurz und unkompliziert am Telefon.</p></div>
       <div class="step reveal"><b>Kennenlernen vor Ort</b><p>Du schaust dir Betrieb und Team an – und wenn's passt, machen wir dir ein Angebot.</p></div>
     </div>
@@ -611,10 +611,10 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
           <div class="field"><label for="telefon">Telefonnummer *</label><input id="telefon" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="z. B. 0170 1234567" required /></div>
           <div class="field"><label for="email">E-Mail *</label><input id="email" name="email" type="email" autocomplete="email" placeholder="z. B. max@beispiel.de" required /></div>
           <div class="field">
-            <label for="lebenslauf">Lebenslauf <span class="req">*</span> <span class="lbl-hint">· Pflicht – ohne Lebenslauf keine Bewerbung möglich</span></label>
+            <label for="lebenslauf" id="lebenslaufLabel">Lebenslauf <span class="lbl-hint">· optional – gerne direkt mitschicken</span></label>
             <label class="upload" id="uploadBox" for="lebenslauf">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5"/><path d="M12 3v12"/></svg>
-              <span id="uploadLabel">Lebenslauf hochladen – klicken oder hierher ziehen (PDF, Word, Foto · max. 5&nbsp;MB)</span>
+              <span id="uploadLabel">Lebenslauf hochladen (optional) – klicken oder hierher ziehen (PDF, Word, Foto · max. 5&nbsp;MB)</span>
               <button type="button" class="upload__remove" id="uploadRemove" hidden aria-label="Datei entfernen">×</button>
               <input id="lebenslauf" name="lebenslauf" type="file" accept=".pdf,.jpg,.jpeg,.png,.webp,.doc,.docx,application/pdf,image/jpeg,image/png,image/webp,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
             </label>
@@ -667,7 +667,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
       <h2 class="sec-title" style="margin:0 auto">Kurz &amp; knapp beantwortet</h2>
     </div>
     <div class="faq">
-      <details><summary>Brauche ich einen Lebenslauf?</summary><div class="faq__a">Ja. Für die Bewerbung lädst du im letzten Schritt bitte deinen Lebenslauf hoch (PDF, Word oder Foto · max. 5&nbsp;MB) – ohne Lebenslauf lässt sich die Bewerbung nicht absenden. Ein Anschreiben brauchst du nicht.</div></details>
+      <details><summary>Brauche ich einen Lebenslauf?</summary><div class="faq__a">Für die <strong>Kaufmännische Fachkraft / Vertriebsinnendienst</strong> ist ein Lebenslauf erforderlich – ohne Upload lässt sich die Bewerbung für diese Stelle nicht absenden. Für die beiden Produktionsstellen (Abkant-/Biegetechnik und Laser-/Stanztechnik) ist der Lebenslauf <strong>optional</strong>: Du kannst ihn gerne direkt mitschicken, musst aber nicht. Format: PDF, Word oder Foto · max. 5&nbsp;MB. Ein Anschreiben brauchst du nie.</div></details>
       <details><summary>Welche Voraussetzungen sollte ich mitbringen?</summary><div class="faq__a">Für die beiden Produktionsstellen ist eine abgeschlossene Ausbildung in der Metalltechnik (oder eine vergleichbare Qualifikation) sowie die Bereitschaft zum 2-Schichtbetrieb wichtig. Für den Vertriebsinnendienst eine kaufmännische Ausbildung und ein sicherer Umgang mit MS Office. Die kurzen Fragen im Formular führen dich durch das Passende.</div></details>
       <details><summary>Wie schnell bekomme ich eine Rückmeldung?</summary><div class="faq__a">Wir melden uns persönlich und schnell – in der Regel telefonisch für ein kurzes, lockeres Erstgespräch.</div></details>
       <details><summary>Sind die Stellen befristet?</summary><div class="faq__a">Nein. Alle Stellen sind unbefristete Festanstellungen in Vollzeit am Standort Bad Dürrheim.</div></details>
@@ -786,6 +786,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
     vertrieb: {
       title: "Kaufmännische Fachkraft / Vertriebsinnendienst (m/w/d)",
       short: "Vertriebsinnendienst",
+      cvPflicht: true,   /* Lebenslauf nur bei dieser Stelle Pflicht (K.O.) */
       webhook: "https://api-v2.lead-table.com/api/webhook/generic/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0YWJsZUlEIjoiNmFhYmQxYzZlNTE5NGI1NDQ2NzMzYjQ2IiwiY3VzdG9tZXJJRCI6IjZhYWJkMTg0NDYyZjU3NGE1ZWYyMDBlMiIsImFnZW5jeUlEIjoiNjliZDc3NzVlNGQxN2IzOGVkNjUzZDE2IiwiaWF0IjoxNzg5NjQ1MjU0fQ.KIdCzBRvctSGgbhsnkEk41LYcIG2Jv8XRW7glGleJmA",
       questions: [
         {
@@ -1058,6 +1059,9 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
   function stepEl(n){ return steps[n-1]; }
   function isQuestionStep(elm){ return elm && elm.hasAttribute && elm.hasAttribute("data-qstep"); }
 
+  /* Lebenslauf ist nur bei bestimmten Stellen Pflicht (aktuell: Vertriebsinnendienst). */
+  function cvRequired(){ var pos = POSITIONS[activePosKey]; return !!(pos && pos.cvPflicht); }
+
   function stepValid(n){
     var s = stepEl(n); if (!s) return false;
     var radios = s.querySelectorAll('input[type="radio"]');
@@ -1068,8 +1072,8 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
       if (inp.type === "email" && inp.value && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(inp.value.trim())) ok = false;
       if (inp.type === "tel" && inp.value && inp.value.replace(/\D/g,"").length < 6) ok = false;
     });
-    /* Lebenslauf ist Pflicht: ohne hochgeladene Datei kein Absenden */
-    if (s.getAttribute("data-step") === "kontakt" && !cvFile) ok = false;
+    /* Lebenslauf nur bei Pflicht-Stellen (cvPflicht) K.-o.-Kriterium */
+    if (s.getAttribute("data-step") === "kontakt" && cvRequired() && !cvFile) ok = false;
     return ok;
   }
 
@@ -1082,6 +1086,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
     label.textContent = "Schritt " + current + " von " + TOTAL;
     btnBack.style.visibility = current > 1 ? "visible" : "hidden";
     btnNext.textContent = current === TOTAL ? "Bewerbung absenden" : "Weiter";
+    updateCvUi();
     btnNext.disabled = !stepValid(current);
     errBox.classList.remove("is-visible");
   }
@@ -1191,7 +1196,22 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
      ========================================================= */
   var fileInput = document.getElementById("lebenslauf"), uploadBox = document.getElementById("uploadBox"),
       uploadLabel = document.getElementById("uploadLabel"), uploadRemove = document.getElementById("uploadRemove"),
-      uploadError = document.getElementById("uploadError"), uploadDefaultText = uploadLabel.textContent, cvFile = null;
+      uploadError = document.getElementById("uploadError"), lebenslaufLabel = document.getElementById("lebenslaufLabel"), cvFile = null;
+  /* Platzhalter + Feld-Label je nach Stelle (Pflicht vs. optional) */
+  function uploadPlaceholder(){
+    return cvRequired()
+      ? "Lebenslauf hochladen – klicken oder hierher ziehen (PDF, Word, Foto · max. 5 MB)"
+      : "Lebenslauf hochladen (optional) – klicken oder hierher ziehen (PDF, Word, Foto · max. 5 MB)";
+  }
+  function updateCvUi(){
+    if (!uploadLabel) return;
+    if (lebenslaufLabel){
+      lebenslaufLabel.innerHTML = cvRequired()
+        ? 'Lebenslauf <span class="req">*</span> <span class="lbl-hint">· Pflicht – ohne Lebenslauf keine Bewerbung möglich</span>'
+        : 'Lebenslauf <span class="lbl-hint">· optional – gerne direkt mitschicken</span>';
+    }
+    if (!cvFile) uploadLabel.textContent = uploadPlaceholder();
+  }
   function setUploadError(m){ uploadError.textContent = m || ""; uploadError.classList.toggle("is-visible", !!m); }
   function acceptFile(file){
     setUploadError(""); if (!file) return;
@@ -1202,7 +1222,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
     btnNext.disabled = !stepValid(current);
     if (!locked) lockHeight();
   }
-  function clearFile(){ cvFile = null; fileInput.value = ""; uploadBox.classList.remove("has-file"); uploadLabel.textContent = uploadDefaultText; uploadRemove.hidden = true; setUploadError(""); btnNext.disabled = !stepValid(current); }
+  function clearFile(){ cvFile = null; fileInput.value = ""; uploadBox.classList.remove("has-file"); uploadLabel.textContent = uploadPlaceholder(); uploadRemove.hidden = true; setUploadError(""); btnNext.disabled = !stepValid(current); }
   fileInput.addEventListener("change", function(){ acceptFile(fileInput.files[0]); });
   uploadRemove.addEventListener("click", function(ev){ ev.preventDefault(); ev.stopPropagation(); clearFile(); });
   ["dragover","dragenter"].forEach(function(t){ uploadBox.addEventListener(t, function(ev){ ev.preventDefault(); uploadBox.classList.add("is-drag"); }); });
@@ -1302,7 +1322,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
     if (form.querySelector('input[name="firma_website"]').value){ finishSuccess(); return; } /* Honeypot */
     var pos = POSITIONS[activePosKey];
     if (!pos || !pos.webhook){ errBox.classList.add("is-visible"); return; }
-    if (!cvFile){ setUploadError("Bitte lade deinen Lebenslauf hoch – er ist für die Bewerbung erforderlich."); return; } /* Pflicht */
+    if (cvRequired() && !cvFile){ setUploadError("Bitte lade deinen Lebenslauf hoch – er ist für diese Stelle erforderlich."); return; } /* Pflicht nur bei cvPflicht-Stellen */
 
     submitting = true; btnNext.disabled = true;
     btnNext.textContent = "Wird gesendet …";
@@ -1310,7 +1330,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#cddbf2}
 
     var data = collect();
     uploadCv().catch(function(){ return ""; }).then(function(cvUrl){
-      data.lebenslauf = cvUrl || "siehe E-Mail-Anhang";
+      data.lebenslauf = cvUrl || (cvFile ? "siehe E-Mail-Anhang" : "");
       var payload = JSON.stringify(data);
       var toLeadTable = fetch(pos.webhook, { method:"POST", headers:{ "Content-Type":"application/json" }, body: payload })
         .then(function(res){ if (!res.ok) throw new Error("HTTP "+res.status); })
